@@ -7,16 +7,6 @@ body {
   background-color: #ffe4ec;
   color: #333;
 }
-.fade-in {
-  opacity: 0;
-  animation: fadeInAnimation ease 2s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeInAnimation {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
 
 header .profile-pic {
   width: 150px;
@@ -78,7 +68,10 @@ header::before {
 /* Pink Overlay Layer */
 header::after {
   content: "";
-  background-color: rgba(209, 60, 110, 0.5); /* pink with transparency */
+  background: linear-gradient(
+    rgba(233, 30, 99, 0.4),
+    rgba(255, 192, 203, 0.6)
+  );
   position: absolute;
   top: 0;
   left: 0;
@@ -126,6 +119,7 @@ section {
   border-radius: 8px;
   transition: transform 0.2s ease;
 }
+ 
 
 section:hover {
   transform: scale(1.02);
@@ -168,4 +162,52 @@ footer {
   background-color: #e91e63;
   color: #fff;
   font-size: 0.9rem;
+}
+.fade-in {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    text-align: center;
+    background-color: #ffe4ec;
+    color: #e91e63;
+    border-right: 8px solid #e91e63;
+    border-radius: 50%;
+    
+  opacity: 0;
+  animation: fadeInAnimation ease 5S forwards;
+  border-style:solid;
+}
+
+@keyframes fadeInAnimation {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@media only screen and (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p,
+  header .minor {
+    font-size: 1rem;
+  }
+
+  header .profile-pic {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0.5rem;
+  }
+
+  section {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  body {
+    font-size: 16px;
+  }
 }
