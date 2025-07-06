@@ -1,0 +1,137 @@
+/* General body settings */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #ffe4ec;
+  color: #333;
+}
+header .profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Header */
+header {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 4rem 2rem;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Background Image Layer */
+header::before {
+  content: "";
+  background: url('backgroundp.webp') center/cover no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(8px);
+  z-index: -2;
+}
+
+/* Pink Overlay Layer */
+header::after {
+  content: "";
+  background-color: rgba(209, 60, 110, 0.5); /* pink with transparency */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+header {
+  background-color: #e91e63;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  font-size: 3rem;
+}
+
+header p {
+   
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+} 
+header .minor{
+    font-family: cursive;
+    font-size: medium;
+    color:#fff;
+    margin-top: 0.5rem;
+}
+
+
+
+/* Sections */
+section {
+  background-color: #fff;
+  padding: 2rem;
+  margin: 1.5rem auto;
+  max-width: 800px;
+  border-left: 8px solid #e91e63;
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.2);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+section:hover {
+  transform: scale(1.02);
+}
+
+h2 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+  color: #e91e63;
+  border-bottom: 2px solid #f06292;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Lists */
+ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+/* Contact Links */
+section#contact p a {
+  color: #e91e63;
+  text-decoration: none;
+}
+
+section#contact p a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #e91e63;
+  color: #fff;
+  font-size: 0.9rem;
+}
